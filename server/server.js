@@ -23,7 +23,7 @@ const { auth } = require('./middleware/auth');
 //==========================
 //         BRAND
 //==========================
-app.post('/api/product/brand',auth,(req,res)=>{
+app.post('/api/product/brand',auth,admin,(req,res)=>{
     const brand = new Brand(req.body);
 
     brand.save((err, doc)=>{
