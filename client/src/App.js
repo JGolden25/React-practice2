@@ -1,12 +1,25 @@
-import React from 'react';
+import React, {Component} from 'react';
+import axios from 'axios';
+import { render } from 'react-dom';
+
+class App extends Component {
+
+componentDidMount() {
+  axios.get('/api/product/brands').then(response=>{
+    console.log(response)
+  })
+}
 
 
-function App() {
+
+
+
+render() {
   return (
     <div className="App">
       App working
     </div>
   );
 }
-
+}
 export default App;
